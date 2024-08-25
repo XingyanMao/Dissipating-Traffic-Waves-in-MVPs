@@ -7,15 +7,15 @@ Num_step = floor(Time_sim/Tim_step);            % Simulation setps
 Tao  =0.71*ones(Num_veh,1);
 
 %读取真实的领航车的行驶数据
-True_Leader = readtable('C:\Users\Administrator\Downloads\MixedPlatoon\veh_frontID_NGSIM_Data\us_101\vehID_1106_frontID_1101\frontID_1101.csv');
+True_Leader = readtable('C:\Users\Administrator\Downloads\MixedPlatoon\us_101\vehID_1106_frontID_1101\frontID_1101.csv');
 v0 = True_Leader.v_Vel/3.6;
 
 %读取真实的跟随车的行驶数据
-Ture_Follower = readtable('C:\Users\Administrator\Downloads\MixedPlatoon\veh_frontID_NGSIM_Data\us_101\vehID_1106_frontID_1101\1106_609_2_1101_57.4.csv');
+Ture_Follower = readtable('C:\Users\Administrator\Downloads\MixedPlatoon\us_101\vehID_1106_frontID_1101\1106_609_2_1101_57.4.csv');
 v_f = Ture_Follower.v_Vel/3.6;
 
 %读取真实的跟随车的行驶数据
-TureFFol = readtable('C:\Users\Administrator\Downloads\MixedPlatoon\veh_frontID_NGSIM_Data\us_101\vehID_1114_frontID_1106\1114_624_2_1106_56.1.csv');
+TureFFol = readtable('C:\Users\Administrator\Downloads\MixedPlatoon\us_101\vehID_1114_frontID_1106\1114_624_2_1106_56.1.csv');
 v_ff = TureFFol.v_Vel/3.6;
 %% 扩充数据长度
 time_original = linspace(0, Time_sim, length(v0)); % 原始时间范围
